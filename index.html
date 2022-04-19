@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>NCDs &amp; Ayurveda: Generating Evidence for Public Health using the Data Science Approach</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="      Dr Arun Mitra   Research Scholar, AMCHSS,   Sree Chitra Tirunal Institute for Medical Sciences &amp; Technology, Trivadrum" />
+    <script src="index_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# NCDs &amp; Ayurveda: Generating Evidence for Public Health using the Data Science Approach
+## STP 608 | Institute of Management in Government, Thiruvananthapuram <br> 19th April, 2022
+### <br> <br> <br> <strong>Dr Arun Mitra</strong> <br> Research Scholar, AMCHSS, <br> Sree Chitra Tirunal Institute for Medical Sciences &amp; Technology, Trivadrum
+
+---
+
+class: slide-with-logo
+
+# Contents
+&lt;br&gt;
+&lt;br&gt;
+.middle[
+### 1. Epidemiological Transition
+### 2. Newer Evidence on NCDs
+### 3. Bridging the Evidence Gap: Need for Research
+### 4. How to Generate Evidence: Data Science Approach
+### 5. The Way Forward
+]
+---
+class: slide-with-logo, middle
+
+# About SCTIMST, Trivandrum
+
+###   Institution of National Importance with the status of a University in 1980 under the Department of Science and Technology, Govt. of India by an Act of Parliament (Act 52 of 1980).
+
+### The institute has the status of a university and offers excellent research and training facilities. 
+
+---
+class:  columns-3, middle
+
+### It has three wings: One of the unique institutions in the country.
+----
+&lt;br/&gt;
+&lt;br/&gt;
+
+### Academic and research programs:
+
++ MPH program
++ PhD program 
++ Post Doctoral Fellowships
+&lt;br/&gt;
+----
+
+![](images/SSH.jpg) 
+Super Speciality Hospital  
+
+&lt;br/&gt;
+----
+
+
+![](images/AMC.jpg) 
+Achutha Menon Centre  
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+
+
+![](images/BMT.jpg) 
+Bio-Medical Technology Wing
+
+
+
+
+---
+class: slide-with-logo, middle
+
+# AMCHSS, SCTIMST, Trivandrum
+
+### Regional Center for Health Technology Assessment (One of Six in India)
+Established under the Department of Health Research (DHR), MoHFW, Govt of India.
+
+### Advanced Center for Clinical Trials
+Established under the Indian Council for Medical Research (ICMR)
+
+### Research Collaborations
+National Bodies, NGOs, International Universities, Health Agencies
+
+---
+class: slide-with-logo, middle
+
+# Activities on NCDs at AMCHSS
+
+- NCD Risk factor Survey; 2016-20; funded by Govt. of Kerala
+- NCD Risk Factor Survey under the Integrated Disease Surveillance Project (ICMR funded).
+- Secondary prevention of stroke survivors in Kollam. 2021-2022; (GOK funded)
+- Prevalence of NCD risk factors in the Kani Tribe in Trivandrum; funded by KSCSTE
+- Understanding disease clustering (multi-morbidity) in the tribal population of Kerala and Tamil Nadu.
+- Scaling up interventions to improve the control of hypertension and diabetes in partnership with the governments of Kerala and Tamil Nadu: Leveraging India's National NCD program. Funded by National Health and Medical Research Council, Australia
+- Kerala Diabetes Prevention Project Extension study. Funded by National Health and Medical Research Council, Australia
+- Systems thinking approach to developing an integrated and patient-centred intervention model for multi-morbidity care in primary care settings in India. Funded by MRC, UK 
+- Centre of Advanced Research Excellence in Heart Failure; funded by ICMR.
+
+---
+class: segue
+
+# 1. Epidemiological Transition
+---
+
+# Ongoing Epidemiological Transition
+
+&lt;br&gt;
+
+&lt;img src="images/epid_transition.jpg" align="middle" width="100%"&gt; 
+
+.footnote[Dandona L, Dandona R, Kumar GA, et al. (2017) Nations within a nation: variations in epidemiological transition across the states of India, 1990–2016 in the Global Burden of Disease Study. The Lancet 390(10111). Elsevier: 2437–2460. DOI: 10.1016/S0140-6736(17)32804-0]
+---
+class: slide-with-logo
+
+# Burden of NCDs in India
+
+
+.pull-left-1[
+
+- Approximately 4.7 million deaths.
+- Comprised 49% of all-cause mortality. 
+- 16,939 DALYs per 1,00,000. 
+- 50–70% of patients treatment in private facilities.
+- States with a higher disease burden like Kerala, utilize private health facilities more than the public health facilities. 
+- Hospitalization for NCDs pushed 47% of the households to catastrophic expenditure. 
+]
+
+.pull-right-2[
+
+- Private health facilities pushed more households to CHE (66.3%) as compared to public health facilities (17.1%). 
+
+&lt;br&gt;
+![](images/ncd_indicators.jpg)
+
+]
+
+.footnote[Menon GR, Yadav J, John D. Burden of non-communicable diseases and its associated economic costs in India. Social Sciences &amp; Humanities Open. 2022 Jan 1;5(1):100256.]
+---
+
+
+
+class: slide-with-logo
+# Factors contributing to hypertension and cardiovascular disease
+&lt;br&gt;
+.center[
+&lt;img src="images/riskfactors2.jpeg" align="middle" width="65%"&gt; ]
+ 
+.footnote[Kario K, Chia YC, Sukonthasarn A, Turana Y, Shin J, Chen CH,
+et al. Diversity of and initiatives for hypertension management in
+Asia—why we need the HOPE Asia Network. J Clin Hypertens
+(Greenwich). 2020;22:331–43]
+---
+
+
+class: slide-with-logo
+# Lifestyle Risk Factors of Atherosclerosis
+&lt;br&gt;
+.center[
+&lt;img src="images/riskfactors1.jpeg" align="middle" width="85%"&gt; ]
+ 
+.footnote[Lechner, et. al., Lifestyle factors and high-risk atherosclerosis: Pathways and mechanisms beyond traditional risk factors, European Journal of Preventive Cardiology, Volume 27, Issue 4, 1 March 2020, Pages 394–406, https://doi.org/10.1177/2047487319869400]
+---
+
+.footnote[Rinninella E, Raoul P, Cintoni M, et al. (2019) What is the Healthy Gut Microbiota Composition? A Changing Ecosystem across Age, Environment, Diet, and Diseases. Microorganisms 7(1): 14. DOI: 10.3390/microorganisms7010014.] 
+
+.pull-left-2[
+# Beyond Traditional Risk Factors
+
+### Chronic inflammation 
+### Dysbiosis (gut microbiota), leaky gut
+### Lack of metabolic flexibility
+### Senescence &amp; autophagy
+### Species Diversity
+]
+
+
+
+.pull-right-1[
+&lt;img src="images/microbiota_1.png" align="middle" width="100%"&gt; 
+### Profile of microbiota in Eubiosis
+
+]
+
+
+---
+
+class: segue
+
+# 2. Newer Evidence on NCDs
+---
+
+
+class: slide-with-logo
+
+.footnote[Plaza-Diaz, Julio. 2020. "Nutrition, Microbiota and Noncommunicable Diseases" Nutrients 12, no. 7: 1971. https://doi.org/10.3390/nu12071971 ]
+
+.center[
+&lt;img src="images/ncd_research1.jpg" align="middle" width="85%"&gt; ]
+ 
+---
+class: slide-with-logo
+
+# Dysbiosis 
+
+.footnote[West CE, Renz H, Jenmalm MC, Kozyrskyj AL, Allen KJ, Vuillermin P, Prescott SL, MacKay C, Salminen S, Wong G, Sinn J. The gut microbiota and inflammatory noncommunicable diseases: associations and potentials for gut microbiota therapies. Journal of Allergy and Clinical Immunology. 2015 Jan 1;135(1):3-13.]
+
+.center[
+&lt;img src="images/dysbiosis1.jpg" align="middle" width="85%"&gt; ]
+ 
+
+---
+class: slide-with-logo
+# Antibiotics use and Dysbiosis 
+
+.footnote[West CE, Renz H, Jenmalm MC, Kozyrskyj AL, Allen KJ, Vuillermin P, Prescott SL, MacKay C, Salminen S, Wong G, Sinn J. The gut microbiota and inflammatory noncommunicable diseases: associations and potentials for gut microbiota therapies. Journal of Allergy and Clinical Immunology. 2015 Jan 1;135(1):3-13.]
+.center[
+&lt;img src="images/dysbiosis2.jpg" align="middle" width="75%"&gt; ]
+ 
+
+---
+# Newer Hypotheses on NCDs
+
+.footnote[Huang R, Ju Z, Zhou PK. A gut dysbiotic microbiota-based hypothesis of human-to-human transmission of non-communicable diseases. Science of The Total Environment. 2020 Nov 25;745:141030.]
+&lt;br&gt;
+&lt;img src="images/dysbiosis4.jpg" align="middle" width="100%"&gt; 
+ 
+
+---
+class: slide-with-logo
+
+# Latest Evidence
+
+.footnote[Kario K, Mogi M, Hoshide S. Latest hypertension research to inform clinical practice in Asia. Hypertension Research. 2022 Apr;45(4):555-72.]
+
+.center[
+&lt;img src="images/htn_research1.jpg" align="middle" width="70%"&gt; ]
+ 
+
+---
+
+class: segue
+
+# 3. Bridging the Evidence Gap: Need for Research
+---
+class: slide-with-logo
+
+# The Battle of Okinawa
+
+.footnote[Okinawa Island had the bloodiest ground battle of the Pacific War from April 1 to June 22, 1945. During this 82-day-long battle, about 95,000 Imperial Japanese Army troops and 20,195 Americans were killed.]
+
+.center[
+&lt;img src="images/okinawa_battle.jpg" align="middle" width="70%"&gt; 
+]
+
+---
+
+class: slide-with-logo
+
+.footnote[Ikezaki H, et.al;, Kyushu and Okinawa Population Study (KOPS): a large prospective cohort study in Japan. BMJ open. 2021 Dec 1;11(12):e053763.]
+
+.center[
+&lt;img src="images/okinawa_map.png.jpg" align="middle" width="80%"&gt; 
+]
+---
+
+class: slide-with-logo
+
+.footnote[Willcox DC, Willcox BJ, Hsueh WC, Suzuki M. Genetic determinants of exceptional human longevity: insights from the Okinawa Centenarian Study. Age. 2006 Dec;28(4):313-32.]
+
+# Steady rise in number of Centenarians
+.center[
+&lt;img src="images/okinawa_research3.jpg" align="middle" width="80%"&gt; 
+]
+---
+.footnote[Willcox DC, Willcox BJ, Hsueh WC, Suzuki M. Genetic determinants of exceptional human longevity: insights from the Okinawa Centenarian Study. Age. 2006 Dec;28(4):313-32.]
+
+# Prevalence of Centenarians
+.center[
+&lt;img src="images/okinawa_barchart.png" align="middle" width="80%"&gt; 
+]
+
+---
+.footnote[Willcox DC, Willcox BJ, He Q, Wang NC, Suzuki M. They really are that old: a validation study of centenarian prevalence in Okinawa. The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2008 Apr 1;63(4):338-49.]
+
+# Whipple's Index highest in the World
+
+.center[
+&lt;img src="images/okinawa_research4.jpg" align="middle" width="80%"&gt; 
+]
+
+---
+
+class: slide-with-logo
+
+# Books on the Okinawa Program
+&lt;br&gt;
+.pull-left[
+&lt;img src="images/okinawa_program.jpg" align="middle" width="70%"&gt; 
+]
+
+.pull-right[
+&lt;img src="images/okinawa_diet_book.jpg" align="middle" width="70%"&gt; 
+]
+---
+&lt;br&gt;
+.center[
+&lt;img src="images/okinawa_research1.jpg" align="middle" width="100%"&gt; 
+ ]
+ 
+.footnote[Bernstein AM, Willcox BJ, Tamaki H, Kunishima N, Suzuki M, Craig Willcox D, Kristen Yoo JS, Perls TT. First autopsy study of an Okinawan centenarian: absence of many age-related diseases. The Journals of Gerontology Series A: Biological Sciences and ]
+
+---
+
+class: center, middle
+
+# Okinawa in the news for a different reason
+
+&lt;br&gt;
+
+&lt;img src="images/okinawa_news1.jpg" align="middle" width="100%"&gt; 
+ 
+---
+
+class: slide-with-logo
+
+# Secret #1: Ikigai
+&lt;br&gt;
+.pull-left-1[
+&lt;img src="images/ikigai_book.jpg" align="middle" width="100%"&gt; 
+]
+
+.pull-right-2[
+&lt;img src="images/ikigai_concept.jpg" align="middle" width="90%"&gt; 
+]
+
+.footnote[García H, Miralles F. Ikigai. Bookline; 2016.]
+---
+class: slide-with-logo
+# Secret #2: Hara Hachi Bu
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left-1[
+&lt;img src="images/hara_hachi_bu2.jpg" align="middle" width="100%"&gt; 
+]
+
+.pull-right-2[
+&lt;img src="images/hara_hachi_bu.jpg" align="middle" width="100%"&gt; 
+]
+
+ 
+---
+# Caloric restriction: Key to Okinawa Diet
+.center[
+&lt;img src="images/okinawa_diet2.jpg" align="middle" width="80%"&gt; 
+ ]
+ 
+---
+class: slide-with-logo
+
+# Validation Studies
+
+.footnote[Willcox DC, Willcox BJ, He Q, Wang NC, Suzuki M. They really are that old: a validation study of centenarian prevalence in Okinawa. The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2008 Apr 1;63(4):338-49.]
+
+.center[
+&lt;img src="images/okinawa_research2.jpg" align="middle" width="70%"&gt; 
+]
+
+
+.footnote[Willcox BJ, Willcox DC, Todoriki H, Fujiyoshi A, Yano K, He Q, Curb JD, Suzuki M. Caloric restriction, the traditional Okinawan diet, and healthy aging: the diet of the world's longest‐lived people and its potential impact on morbidity and life span. Annals of the New York Academy of Sciences. 2007 Oct;1114(1):434-55.]
+---
+
+# Large Scale, Prospective Cohort Study
+
+.center[
+&lt;img src="images/okinawa_cohort.jpg" align="middle" width="100%"&gt; 
+]
+ 
+.footnote[Ikezaki H, Furusyo N, Nakashima R, Umemoto M, Yamamoto K, Matsumoto Y, Ohta A, Yamasaki S, Hiramine S, Takayama K, Ogawa E. Kyushu and Okinawa Population Study (KOPS): a large prospective cohort study in Japan. BMJ open. 2021 Dec 1;11(12):e053763.]
+---
+
+# Food Pyramid of the Okinawa Diet
+
+
+.center[
+&lt;img src="images/okinawa_diet_pyramid.jpg" align="middle" width="70%"&gt; 
+]
+ 
+.footnote[Ikezaki H, Furusyo N, Nakashima R, Umemoto M, Yamamoto K, Matsumoto Y, Ohta A, Yamasaki S, Hiramine S, Takayama K, Ogawa E. Kyushu and Okinawa Population Study (KOPS): a large prospective cohort study in Japan. BMJ open. 2021 Dec 1;11(12):e053763.]
+---
+
+
+class:
+
+
+.pull-left-1[
+.content-box-purple[
+Aims to investigate the gene–environmental interactions on NCDs in Japan
+]
+
+.content-box-green[
+
+Collected the extensive data on medical histories, lifestyle habits, psychological factors and genomic information.
+]
+
+
+
+]
+.pull-right-2[
+&lt;img src="images/okinawa_cohort_table1.jpg" align="middle" width="100%"&gt;
+.content-box-blue[
+]
+]
+&lt;img src="images/okinawa_cohort_table2.jpg" align="middle" width="100%"&gt;
+ 
+
+---
+
+class: slide-with-logo
+
+# Secret #3: Moai
+&lt;img src="images/okinawa_moai.jpg" align="center" width="100%"&gt;
+
+.pull-left-1[
+&lt;br&gt;
+&lt;br&gt;
+.content-box-purple[
+Experience Less Stress
+]
+.content-box-blue[
+Be Happier
+]
+.content-box-green[
+Live Longer
+]
+
+
+
+]
+.pull-right-2[
+&lt;img src="images/okinawa_moai1.jpg" align="middle" width="90%"&gt;
+]
+
+
+---
+#  Ayurveda for the Management of Non Communicable Diseases
+
+.blockquote[
+"One who carefully observes the rules regarding diet and behavioural practices, consumes healthy and wholesome food, observes beneficial practices, carries himself thoughtfully in daily activities, does not succumb to passion and greed, who cherishes a selfless noble generous nature, has equal respect for every living being in all conditions, speaks and relies on the truth, maintains a forgiving attitude and reposes faith in knowledgeable, experienced and elderly persons is successful in maintaining healthy living and a healthy body and in leading a disease-free, peaceful, healthy and happy life"
+
+.right[ -- Vagbhata from Ashtanga Hridaya]
+]
+
+&lt;br&gt;
+
+.content-box-purple[
+The efficiencies of such practices in providing long lasting effect on such NCDs need to be  compared, documented and published in standard journals, rather  than obscure journals that will facilitate in involving traditional  practices in the management of NCDs.
+]
+
+.footnote[Ruknuddin G. Ayurveda for the Management of Non Communicable Diseases. Journal of Ayurveda Medical Sciences. 2017;2(3).]
+
+---
+# Various Ayurvedic modalities for NCD Management
+
+ 
+- Dincharya
+- Changes to Aahar &amp; Vihar
+- Rituanusar  Shodhanakarma 
+- Triyaupasthambha
+- Rasayana 
+- Aacharrasayana
+- Sadvrita 
+- Vajikarana
+
+.footnote[Gupta M, Sharma V, Bansal H. Role of Ayurveda in the management of Non-Communicable Disease. Journal of Ayurveda and Integrated Medical Sciences. 2022 Mar 20;7(1):221-4.]
+---
+class: segue
+
+# 4. How to Generate Evidence: Data Science Approach
+
+---
+
+# Need for Innovation in Research
+
+.pull-left-2[
+
+- Needs to evolve.
+- Cluster Randomized Trials  vs Randomized Clinical Trials
+- Larger study populations and numerous variables
+- Need to establish Salience and Individualized care
+- Using EHR
+&lt;img src="images/rct_cluster_rct.jpg" align="center" width="95%"&gt;
+
+]
+
+.pull-right-1[
+&lt;img src="images/epistemiology_ayurveda.jpg" align="center" width="100%"&gt;
+]
+---
+class: center
+
+# Framework for Research
+
+&lt;img src="images/research_in_ayurveda_framework.jpg" align="middle" width="70%"&gt;
+
+---
+
+class: slide-with-logo, center
+
+# Leveraging EHR for Generating Evidence
+
+&lt;br&gt;
+.pull-left-1[
+&lt;img src="images/ehealth_kerala1.png" align="middle" width="100%"&gt; 
+]
+
+.pull-right-2[
+&lt;img src="images/ehealth_kerala2.png" align="middle" width="100%"&gt; 
+]
+
+ 
+---
+class: center
+
+# Government Commitment: Health ID
+
+&lt;img src="images/health_id.png" align="middle" width="100%"&gt;
+
+---
+
+.footnote[Sun B, Fernandez M and Barnard AS (2016) Statistics, damned statistics and nanoscience – using data science to meet the challenge of nanomaterial complexity. Nanoscale Horizons 1(2). The Royal Society of Chemistry: 89–95. DOI: 10.1039/C5NH00126A.]
+
+# Need for meticulous documentation
+
+ 
+.pull-left-1[
+
+- Ayurvedic research need to be more rigorous
+- Huge data with high throughput rates need to be harnessed
+- Difficulties in comprehension and analysis
+- Traditional ways have limits
+- Data science is the way forward
+]
+
+.pull-left-2[
+&lt;img src="images/datascience.jpg" align="middle" width="85%"&gt;
+
+]
+
+
+
+
+---
+
+.footnote[O’Reilly,Big Data Now: 2012 Edition, O’Reilly Media Inc, pp.1 -17, 2012.]
+
+
+# Big Data and Ayurveda
+
+### What is Big Data?
+
+ 
+.pull-left-1[
+- Volume
+- Velocity
+- Variety
+
++ “Some” vs. “All” 
++ “Clean” vs. “Messy”
++ “Causation” vs. “Correlation”
+
+- Concerns of statistical significance
+]
+
+ 
+.pull-left-2[
+&lt;img src="images/datascience1.jpg" align="middle" width="100%"&gt; 
+]
+
+---
+
+class: slide-with-logo
+
+
+
+# Data Science approach for generating evidence 
+
+&lt;br&gt;
+.pull-left[
+&lt;img src="images/research_in_ayurveda_1.jpg" align="middle" width="100%"&gt; 
+]
+
+.pull-right[
+&lt;img src="images/research_in_ayurveda_2.jpg" align="middle" width="100%"&gt; 
+]
+
+ 
+---
+
+class: slide-with-logo
+
+.footnote[Singh, Harpreeta, et. al., Big Data Analysis of Traditional Knowledge-based Ayurveda Medicine, Progress in Preventive Medicine: October 2018 - Volume 3 - Issue 5 - p e0020 doi: 10.1097/pp9.0000000000000020]
+
+# Big Data Research in Ayurveda
+
+&lt;br&gt;
+.pull-left[
+&lt;img src="images/research_in_ayurveda3.jpg" align="middle" width="100%"&gt; 
+&lt;img src="images/research_in_ayurveda4.jpg" align="middle" width="80%"&gt; 
+]
+
+.pull-right[
+&lt;img src="images/research_in_ayurveda5.jpg" align="middle" width="80%"&gt; 
+]
+
+---
+.footnote[Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016)]
+# Reproducible Research
+
+.pull-left[
+&lt;br&gt;
+Research is considered to be reproducible when the exact results can be reproduced if given access to the original data, software, or code.
+
+&lt;br&gt;
+&lt;br&gt;
+
+- The same results should be obtained under the same conditions
+- It should be possible to recreate the same conditions
+]
+.pull-right[
+&lt;img src="images/reproducibility_crisis.JPG" align="middle" width="100%"&gt; 
+]
+
+---
+
+
+
+# Reproducibility Crisis
+
+&lt;img src="images/reproducibility_crisis1.JPG" align="middle" width="100%"&gt; 
+
+.footnote[Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016)]
+---
+.footnote[Munafò, M.R., Nosek, B.A., Bishop, D.V.M., Button, K.S., Chambers, C.D., Percie du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J.J., Ioannidis, J.P.A., 2017. A manifesto for reproducible science. Nature Human Behaviour 1, 0021. https://doi.org/10.1038/s41562-016-0021]
+
+#  Threats to Reproducibility
+
+&lt;img src="images/threats_reproducibility.JPG" align="middle" width="85%"&gt; 
+
+---
+
+# What are the good practices of reproducible research?  
+
+### How to make your work reproducible?
+
+### Reproducible workflows give you credibility!
+
+&lt;img src="images/miracles.jpg" align="middle" width="85%"&gt; 
+
+---
+.footnote[Roger D. Peng, Reproducible Research: Concepts and Ideas p.10 on Coursera]
+# Research Pipeline
+
+&lt;img src="images/research_pipeline.png" align="middle" width="100%"&gt; 
+
+---
+
+
+
+# Reproducibility spectrum for published research
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="images/reproducibility_spectrum.jpg" align="middle" width="100%"&gt; 
+
+.footnote[Peng, RD Reproducible Research in Computational Science Science (2011)]
+---
+
+class: segue
+
+# 5. The Way Forward
+
+---
+
+class: slide-with-logo, center
+.left[# Digital Management of HTN]
+
+&lt;br&gt;
+
+&lt;img src="images/ncd_management1.jpg" align="middle" width="65%"&gt; 
+ 
+.footnote[Kario K, Chia YC, Sukonthasarn A, Turana Y, Shin J, Chen CH,
+et al. Diversity of and initiatives for hypertension management in
+Asia—why we need the HOPE Asia Network. J Clin Hypertens
+(Greenwich). 2020;22:331–43]
+
+---
+
+class: slide-with-logo
+
+.footnote[Rudraksh Tuwani†, Neelansh Garg†, Rakhi NK and Ganesh Bagler*, DietRx: An integrative resource to explore interrelationships among foods, diseases, genes and chemicals (2018), http://cosylab.iiitd.edu.in/dietrx/]
+# DietRx: Innovation by IIIT-Delhi
+
+### https://cosylab.iiitd.edu.in/dietrx/
+
+&lt;br&gt;
+
+.pull-left[
+&lt;img src="images/future_diet_rx1.jpg" align="middle" width="100%"&gt; 
+] 
+
+.pull-right[
+&lt;img src="images/future_diet_rx3.jpg" align="middle" width="100%"&gt; 
+] 
+---
+
+class: slide-with-logo
+.footnote[Rudraksh Tuwani†, Neelansh Garg†, Rakhi NK and Ganesh Bagler*, DietRx: An integrative resource to explore interrelationships among foods, diseases, genes and chemicals (2018), http://cosylab.iiitd.edu.in/dietrx/]
+# DietRx: Innovation by IIIT-Delhi
+
+&lt;br&gt;
+
+.pull-left-2[
+&lt;img src="images/future_diet_rx2.jpg" align="middle" width="100%"&gt; 
+] 
+
+.pull-right-1[
+&lt;img src="images/future_diet_rx4.jpg" align="middle" width="100%"&gt; 
+] 
+---
+
+# Health Data Science at AMCHSS
+
+### Data Analysis Workshops: ~100 Health Professionals
+
+- National Centre for Disease Control, New Delhi
+- Centre for Disease Control, US Embassy
+- National Institute of Epidemiology, Chennai
+- Armed Forces Medical College, Pune
+- All India Institute of Medical Sciences, New Delhi, Bhopal, Raipur, Jhodpur
+
+### Developing Course Modules in Health Data Science: University of Norway, University of South Korea
+
+### Mapping Stroke Centers in India: University of Chicago
+
+### Analysing COVID-19 Testing Data: ICMR, DHR, MoHFW
+
+---
+
+class: slide-with-logo, center
+
+&lt;img src="images/data_preparation.png" align="middle" width="100%"&gt; 
+
+
+---
+
+class: slide-with-logo, middle
+
+&lt;img src="images/crs_results1.png" align="middle" width="100%"&gt; 
+
+---
+
+class: slide-with-logo
+
+.footnote[Data Source: CRD Data, Thiruvananthapuram Corporation]
+# Cause of Death by month and year
+&lt;br&gt;
+&lt;img src="images/deaths_cod_month_year - Copy.JPG" align="middle" width="100%"&gt; 
+
+---
+
+class: slide-with-logo, center
+
+# AMCHSS COVID-19 Dashboard
+
+&lt;br&gt;
+&lt;img src="images/1.JPG" align="middle" width="100%"&gt; 
+
+
+---
+
+class: slide-with-logo, center
+# Near Real-time Evidence
+&lt;img src="images/9.JPG" align="middle" width="100%"&gt; 
+
+---
+
+class: slide-with-logo, center
+# Incorporates data from other sources
+&lt;img src="images/10.JPG" align="middle" width="100%"&gt; 
+
+
+---
+
+class: slide-with-logo, center
+# Semi-automated interactive reporting
+&lt;img src="images/12.JPG" align="middle" width="70%"&gt; 
+
+---
+
+class: slide-with-logo, center
+# Spatial Analysis
+### Hotspots for Access to Stroke Centers across India
+&lt;img src="images/taluka_hotspots.png" align="middle" width="95%"&gt; 
+
+
+---
+
+class: slide-with-logo
+
+# Using Medical Images to predict Diabetic Retinopathy
+
+### Deep Learning | Convolutional Neural Networks
+
+### Deployable Public Health Tools
+
+&lt;img src="images/oct_7.jpg" align="middle" width="100%"&gt; 
+
+
+
+
+
+---
+# Public Health Implications
+
+
+.pull-left-1[
+- Encourage Data-use policy
+- Improve data processing, validation, and efficiency of the system
+- Integrate Data from different sources
+- Timely and actionable evidence for public health interventions
+- Spatial and temporal analysis are possible
+- Semi-automated Report Generation 
+]
+
+.pull-right-2[
+&lt;img src="images/Picture1.jpg" align="middle" width="100%"&gt; 
+
+- Mapped 35,461 households covering 1,31,095 people spread over 48.5 sq km through participatory GIS
+
+]
+
+---
+class:  center
+
+.middle[
+# Thank You
+]
+
+.bottom[
+.pull-left[&lt;img src="images/RIntro2022_hex.png" align="middle" width="100%"&gt; ]
+
+.pull-right[
+.left[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+[arunmitra@sctimst.ac.in](arunmitra@sctimst.ac.in)
+[https://amchss.github.io/RIntro2022/](https://amchss.github.io/RIntro2022/)
+[https://www.sctimst.ac.in/](https://www.sctimst.ac.in/)
+]]]
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
