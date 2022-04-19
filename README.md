@@ -1,24 +1,17 @@
-# Sydney xaringan
+# NCD & Ayurveda
+## Generating Evidence for Public Health using the Data Science Approach
 
-University of Sydney theme for xaringan (remark.js)
+### ABSTRACT
+STP608 is a course developed by the Indian System of Medicine (ISM), Government of Kerala for training the state medical officers in Ayurveda.
 
-Example and guide here: http://garthtarr.github.io/sydney_xaringan
+### DATE
+April 19, 2022
 
-To get started you will likely need:
+### TIME
+10:00 AM – 11:30 AM
 
-```r
-install.packages('xaringan')
-remotes::install_github("mitchelloharawild/icons")
-install.packages("RefManageR")
-install.packages("DT")
-install.packages("tidyverse")
-install.packages("googleVis")
-```
+### LOCATION
+Institute for Management in Government, Thiruvananthapuram
 
-To run the example, you may also need to follow the instructions [here](https://github.com/mitchelloharawild/icons) to download the set of fontawesome icons as part of the **icons** package setup, i.e. if you haven't already, you'll need to run
-
-```r
-icons::download_fontawesome()
-```
-
-For further customisation you might consider the [xaringanExtra](https://github.com/gadenbuie/xaringanExtra) package.
+### EVENT
+STP 608, Indian Systems of Medicine
